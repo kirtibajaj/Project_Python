@@ -1,0 +1,8 @@
+w,l=map(int,input("Enter width and length of floor : ").split())
+wt,lt=map(int,input("Enter size of Tile in a x b format : ").split("x"))
+cost=int(input("Enter cost of 1 tile : "))
+area=w*l
+tile=wt*lt
+no_of_tile=area//tile
+cost_of_tiles=cost*no_of_tile
+print("Cost of tiles to cover the floor is : {}".format(cost_of_tiles))

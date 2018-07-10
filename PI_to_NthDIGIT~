@@ -1,0 +1,7 @@
+import math
+n=int(input("Enter a digit upto which decimal(max 50) : ".rjust(45)))
+if n<=50:
+	x='.{}f'.format(n)
+	print(format(math.pi,x).center(145))
+else:
+	print("BE IN LIMITS".center(145))
