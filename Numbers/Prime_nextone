@@ -1,0 +1,24 @@
+from math import sqrt
+def prime(num):
+	while True:
+		sq=round(sqrt(num)+1)
+		for i in range(2,sq):
+			if num%i==0:
+				num+=1
+				break
+		else:
+			yield num
+			num+=1
+
+one=prime(int(input(" Enter a number from where prime numbers should start : ")))
+one=iter(one)
+while True:
+	print(next(one),end=" ")
+	ch=input("\nDo you want to continue (y/n) : ").strip().lower()
+	if ch=='y' or ch=='yes' :
+		continue
+	else:
+		print("Thanks for using this")
+		break
+	
+
